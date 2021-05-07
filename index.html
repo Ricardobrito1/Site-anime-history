@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="javascript.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="menu_fechar()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">HOME</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+        </nav>
+        <div class="textbox">
+            <h1>Animes life</h1>
+            <p>Site criado para fãs de anime, que encontraram bons ensinamentos no mundo dos animes </p>
+            <a href="" class="hero-btn">Saiba mais sobre o site</a>
+        </div>
+    </section>
+    <section class="sobre">
+        <!-- Sobre -->
+        <h1>Sobre-nós</h1>
+        <p>O site ideal para fãs de naruto e one piece</p>
+
+
+        <div class="linha">
+            <div class="missao caixa">
+                <h2>Missão</h2>
+                <p>Nossa missão é mostra nossa paixão por anime atraves desse site <br>e fazer com que todos fãs se sintam bem no nosso site</p>
+            </div>
+            <div class="visao caixa">
+                <h2>Visão</h2>
+                <p>Nossa missão é mostra nossa paixão por anime atraves desse site<br> e fazer com que todos fãs se sintam bem no nosso site</p>
+            </div>
+            <div class="valores caixa">
+                <h2>Valores</h2>
+                <p>Nossa missão é mostra nossa paixão por anime atraves desse site <br>e fazer com que todos fãs se sintam bem no nosso site</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime -->
+
+    <section class="anime">
+        <h1>Animes da pagina</h1>
+        <p>Animes que mudaram minha vida</p>
+        <div class="caixa_2">
+            <div class="naruto">
+                <h3>Naruto</h3>
+                <img src="imgs/naruto3.png" class="img_caixa" alt="">
+                <p class="texto_naruto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quibusdam<br> pariatur doloremque, id delectus nisi, dolorem eaque harum officiis, asperiores quos.<br> Inventore eveniet veritatis architecto reiciendis! Error pariatur
+                    iure ut.</p>
+            </div>
+            <div class="onepiece">
+                <h3>One Piece</h3>
+                <img src="imgs/luffy.png" class="img_caixa" alt="">
+                <p class="texto_onep">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quibusdam<br> pariatur doloremque, id delectus nisi, dolorem eaque harum officiis, asperiores quos.<br> Inventore eveniet veritatis architecto reiciendis! Error pariatur
+                    iure ut.</p>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function menu_abrir() {
+        navLinks.style.right = "0";
+
+    }
+
+    function menu_fechar() {
+        navLinks.style.right = "-200px"
+    }
+</script>

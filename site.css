@@ -1,0 +1,270 @@
+webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #2f2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0084ff;
+}
+
+body {
+    background-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(imgs/nackgro.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: deepskyblue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.textbox {
+    color: white;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textbox h1 {
+    font-size: 62px;
+}
+
+.textbox p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid deepskyblue;
+    background: deepskyblue;
+    transition: 1s;
+}
+
+nav .fas {
+    display: none;
+}
+
+@media(max-width:700px) {
+    .textbox h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: deepskyblue;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fas {
+        margin: 10px;
+        display: block;
+        color: white;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+/* Sobre */
+
+.sobre {
+    border-top: deepskyblue solid 5px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    color: deepskyblue;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.missao {
+    background: rgb(135, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 31%;
+}
+
+.visao {
+    background: rgb(135, 227, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 31%;
+}
+
+.valores {
+    background: rgb(135, 201, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 31%;
+}
+
+.linha {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.caixa {
+    transition: 0.8s;
+}
+
+.caixa:hover {
+    box-shadow: 0 0 20px 0px rgba(77, 219, 255, 0.7);
+}
+
+@media(max-width:700px) {
+    .linha {
+        flex-direction: column;
+    }
+}
+
+.caixa_2 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.naruto {
+    background: rgb(255, 166, 0);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 31%;
+    transition: 0.8s;
+}
+
+.naruto:hover {
+    box-shadow: 0 0 30px 0px white;
+}
+
+.onepiece {
+    background-color: rgb(57, 57, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    flex-basis: 31%;
+    margin-right: 50px;
+    transition: 0.8s;
+}
+
+.onepiece:hover {
+    box-shadow: 0 0 30px 0px white;
+}
+
+.img_caixa {
+    width: 200px;
+    height: 200px;
+}
+
+.anime {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
