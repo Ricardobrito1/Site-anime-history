@@ -241,6 +241,7 @@
         
         .naruto img {
             width: 100%;
+            display: block;
         }
         
         .layer {
@@ -305,6 +306,7 @@
         
         .onepiece img {
             width: 100%;
+            display: block;
         }
         
         .layer2 {
