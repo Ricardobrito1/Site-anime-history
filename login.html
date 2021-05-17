@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="javascript.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <section class="header login_header">
+        <nav>
+            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="menu_fechar()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">ONE-PIECE</a></li>
+                    <li><a href="">NARUTO</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+        </nav>
+        <div class="login_page">
+            <div id="login">
+                <form class="loginform" id="loginform_id">
+                    <input type="text" placeholder="Nome" class="ipt_login">
+                    <input type="text" placeholder="Senha" class="ipt_login">
+                    <button onclick="login()" class="butao">Login</button>
+                    <p class="mensagem">Não tem uma conta? <button class="link" onclick="registro()">Registrar-se</button> </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<script>
+    function registro() {
+        ricardo.style.display = "none";
+        frizza.style.display = "block";
+    }
+</script>
