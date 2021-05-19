@@ -30,10 +30,10 @@
         </nav>
         <div class="login_page">
             <div id="login">
-                <form class="loginform" id="loginform_id">
-                    <input type="text" placeholder="Nome" class="ipt_login">
-                    <input type="text" placeholder="Senha" class="ipt_login">
-                    <button onclick="login()" class="butao">Login</button>
+                <form class="loginform" id="form_login" method="post" onsubmit="return entrar()">
+                    <input type="text" placeholder="Nome" class="ipt_login" name="login">
+                    <input type="text" placeholder="Senha" class="ipt_login" name="senha">
+                    <button onclick="login()" id="btn_entrar" class="butao">Login</button>
                     <p class="mensagem">Não tem uma conta? <button class="link" onclick="registro()">Registrar-se</button> </p>
                 </form>
             </div>
@@ -43,8 +43,5 @@
 
 </html>
 <script>
-    function registro() {
-        ricardo.style.display = "none";
-        frizza.style.display = "block";
-    }
+  
 </script>

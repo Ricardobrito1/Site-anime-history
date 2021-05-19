@@ -29,10 +29,11 @@
             <i class="fas fa-bars" onclick="menu_abrir()"></i>
         </nav>
         <div class="cadastro_page">
-            <div class="form_cadastro">
+            <div class="form_cadastro" id="form_cadastro" method="post" onsubmit="return cadastrar()">
                 <form class="register" id="register_id">
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Senha">
+                    <input type="text" name="nome" autofocus="autofocus" placeholder="Nome e sobrenome" required minlength="4">
+                    <input type="text" name="login" placeholder="seu nome de usuário" required minlength="4">
+                    <input type="password" name="senha" placeholder="***************" required minlength="4">
                     <input type="text" placeholder="Email">
                     <button class="butao">Criar</button>
                     <p class="mensagem2">Ja é um membro ? <button class="link">Login</button></p>
