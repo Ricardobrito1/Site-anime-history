@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IoT - Sobre</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="css/contato-e-login.css">
+</head>
+
+<body>
+    <section class="header login_header">
+        <nav>
+            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="menu_fechar()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">ONE-PIECE</a></li>
+                    <li><a href="">NARUTO</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+        </nav>
+        <div class="login_page">
+            <div id="login">
+                <form id="form_login" class="loginform" method="post" onsubmit="return entrar()">
+                    Usuario:
+                    <input type="text" placeholder="Nome" class="ipt_login" name="login">
+                    <br> Senha
+                    <input type="password" placeholder="Senha" class="ipt_login" name="senha">
+                    <br>
+                    <button id="btn_entrar" class="butao">Login</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="extra">
+        <div id="div_erro" class="msg_erro">
+        </div>
+
+        <img src="aguarde-orange.gif" id="img_aguarde">
+        <!--style="display: none;"-->
+
+    </div>
+
+
+    <!--footer inicio-->
+    <div class="footer">
+        <div class="container">
+            <h4>Feito com carinho por um aluno BandTec. Copyright © 2021</h4>
+        </div>
+    </div>
+    <!--footer fim-->
+
+</body>
+
+</html>
+<script>
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.id_usuario_meuapp = json.id;
+                    window.location.href = 'index.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.visibility = 'visible';
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+</script>
