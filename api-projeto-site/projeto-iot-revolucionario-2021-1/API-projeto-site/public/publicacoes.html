@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórum do meu Site</title>
+    <title>AnimesLife</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imgs/Stra.png">
 
     <link rel="stylesheet" href="site.css">
 
@@ -29,53 +34,64 @@
 
 <body onload="obterPublicacoes()">
     <!--header inicio-->
-<section class="header">
-    <nav>
-        <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
-        <div class="nav-links" id="navLinks">
-            <i class="fas fa-times" onclick="menu_fechar()"></i>
-            <h3 class="logoff">Olá, <b id="b_usuario"></b></h3>
-            <ul>
+    <section class="header header-publi">
+        <nav>
 
-                <li><a href="">HOME</a></li>
-                <li><a href="publicacoes.html">BATE PAPO</a></li>
-                <li><a href="login.html">LOGIN</a></li>
-                <li><a href="cadastro.html">CADASTRAR-SE</a></li>
-                <li><a href="">ONE-PIECE</a></li>
-                <li><a href="">NARUTO</a></li>
-            </ul>
-        </div>
-        <i class="fas fa-bars" onclick="menu_abrir()"></i>
-    </nav>
-    <div class="dashboard">
-        <div class="container">
-            <div class="feed">
-                <h1>SALA DE BATE PAPO</h1>
-                <div id="feed_container" class="container">
-                   
-                </div>
-                <div class="post">
+            <h1 class="logoff">Olá, <b id="b_usuario"></b></h1>
+            <div class="nav-links" id="navLinks">
 
-                    <form id="form_publicar" method="post" onsubmit="return publicar()">
-                        
-                        <textarea id="" rows="3" cols="50" maxlength="100" class="textarea-padrao" name="descricao"></textarea>
-                        <button id="btn_publicar" class="botao">Enviar</button>
-                    </form>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="cadastro.html">CADASTRAR-SE</a></li>
+                    <li><a href="onepiece.html">ONE-PIECE</a></li>
+                    <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="graficos.html">GRAFICOS</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <h1 class="titulo-h1">Bate papo</h1>
+        <div class="dashboard">
+            <div class="container1">
+                <div class="public-post">
                     <div class="extra">
                         <div id="div_erro" class="msg_erro">
                         </div>
-                        <img src="aguarde-orange.gif" id="img_aguarde">
+                        <img src="" id="img_aguarde">
                     </div>
-               
-
-               
+                </div>
+                <div class="feed">
+                    <div id="feed_container" class="container">
+                    </div>
+                </div>
+                <div class="container-form">
+                    <form id="form_publicar" method="post" onsubmit="return publicar()">
+                        <textarea id="" rows="1" cols="50" maxlength="1000" class="textarea-padrao" name="descricao"></textarea>
+                        <br>
+                        <input type="submit" id="btn_publicar" class="btn-publi" value="Publicar">
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-    
+
+
+    </section>
+    <section class="footer">
+        <h4>Feito com carinho para amantes de Naruto/Onepiece </h1>
+            <h4>Obrigado por visitar nosso web-site!</h4>
+            <div class="icons">
+                <a href="https://github.com/Ricardobrito1"> <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ricardo-galdino-227796205/"><i class="fa fa-linkedin"></i></a>
+            </div>
+    </section>
+
+
+
+
 
 
 

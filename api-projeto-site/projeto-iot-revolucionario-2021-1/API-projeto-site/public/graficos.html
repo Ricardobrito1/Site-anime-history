@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/Stra.png">
+    <title>AnimesLife</title>
+    <link rel="stylesheet" href="site.css">
+    <script type="text/javascript" src="funcoes.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+    <style>
+        .meu-grafico {
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="header header_graficos">
+        <nav>
+            <a href="index.html"><img src="imgs/LOGO.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="menu_fechar()"></i>
+                <ul>
+
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="publicacoes.html">BATE PAPO</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="cadastro.html">CADASTRAR-SE</a></li>
+                    <li><a href="onepiece.html">ONE-PIECE</a></li>
+                    <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+        </nav>
+        <div class="meu-grafico">
+
+            <canvas id="grafico1"></canvas>
+        </div>
+        <div class="meu-grafico">
+
+            <canvas id="grafico2"></canvas>
+        </div>
+        <div class="meu-grafico">
+
+            <canvas id="grafico3"></canvas>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
+
+<script>
+    var ctx = document.getElementById('grafico1');
+
+
+    var meuGrafico = new Chart(ctx, {
+
+        type: 'bar',
+
+
+        data: {
+
+            labels: ["Amam", "Gostam", "Não gostam"],
+
+            datasets: [
+
+                {
+
+                    label: "One piece",
+
+                    data: [900, 500, 150],
+
+                    borderWidth: 10,
+
+
+                    borderColor: 'rgba(0,191,255)',
+
+                    backgroundColor: 'rgba(0,191,255)',
+                },
+
+
+                {
+
+                    type: 'bar',
+                    label: "Naruto",
+                    data: [850, 400, 200],
+                    borderWidth: 10,
+                    borderColor: 'rgba(	255,69,0)',
+                    backgroundColor: 'rgba(	255,69,0)'
+                }
+            ]
+        },
+
+
+        options: {
+
+            title: {
+
+                display: true,
+
+                fontSize: 25,
+
+
+                text: "Naruto X Onepiece",
+
+                position: 'top',
+            },
+            legend: {
+                fontSize: 25,
+                display: true,
+
+                reverse: true,
+
+                position: 'right'
+            },
+            layout: {
+                padding: {
+
+                    left: 50,
+                    top: 50
+                },
+
+            }
+        }
+    })
+
+
+    Chart.defaults.global.defaultFontColor = "#00bfff";
+    // GRAFICO 2 -----------------------------------------------------------------------------------------
+    var ctx = document.getElementById('grafico2');
+
+
+    var meuGrafico = new Chart(ctx, {
+
+        type: 'bar',
+
+
+        data: {
+
+            labels: ["Pais das ondas", "Exame Chunin", "Missão recuperação do Sasuke", "Galante Jiraya", "Ataque do pain", "Reunião dos kages", "Quarta guerra ninja"],
+
+            datasets: [
+
+                {
+
+                    label: "Gostaram",
+
+                    data: [400, 500, 374, 550, 600, 450, 700],
+
+                    borderWidth: 10,
+
+
+                    borderColor: 'rgba(	255,69,0)',
+
+                    backgroundColor: 'rgba(	255,69,0)',
+                },
+
+
+                {
+
+                    type: 'bar',
+                    label: "Não Gostaram",
+                    data: [350, 100, 320, 250, 150, 360, 50],
+                    borderWidth: 10,
+                    borderColor: 'rgba(0,220,168)',
+                    backgroundColor: 'rgba(0,220,168)'
+                }
+            ]
+        },
+
+
+        options: {
+
+            title: {
+
+                display: true,
+
+                fontSize: 25,
+
+
+                text: "Arcos De naruto",
+
+                position: 'top',
+            },
+            legend: {
+                fontSize: 25,
+                display: true,
+
+                reverse: true,
+
+                position: 'right'
+            },
+            layout: {
+                padding: {
+
+                    left: 50,
+                    top: 50
+                },
+
+            }
+        }
+    })
+
+
+    Chart.defaults.global.defaultFontColor = "#FFFFFF";
+    // GRAFICO 3 --------------------------------------------------------------------------------------------------------------
+    var ctx = document.getElementById('grafico3');
+
+
+    var meuGrafico = new Chart(ctx, {
+
+        type: 'bar',
+
+
+        data: {
+
+            labels: ["EAST BLUE", "ALABASTA", "SKYPIEA", "WATER 7", "THRILLER BARK", "GUERRA MARINEFORD", "ALIANÇA PIRATA", "YONKUO"],
+
+            datasets: [
+
+                {
+
+                    label: "Gostaram",
+
+                    data: [500, 650, 474, 450, 500, 850, 685, 750],
+
+                    borderWidth: 10,
+
+
+                    borderColor: 'rgba(0,191,255)',
+
+                    backgroundColor: 'rgba(0,191,255)',
+                },
+
+
+                {
+
+                    type: 'bar',
+                    label: "Não Gostaram",
+                    data: [350, 150, 220, 350, 185, 260, 100, 50],
+                    borderWidth: 10,
+                    borderColor: 'rgba(0,220,168)',
+                    backgroundColor: 'rgba(0,220,168)'
+                }
+            ]
+        },
+
+
+        options: {
+
+            title: {
+
+                display: true,
+
+                fontSize: 25,
+
+
+                text: "Arcos De naruto",
+
+                position: 'top',
+            },
+            legend: {
+                fontSize: 25,
+                display: true,
+
+                reverse: true,
+
+                position: 'right'
+            },
+            layout: {
+                padding: {
+
+                    left: 50,
+                    top: 50
+                },
+
+            }
+        }
+    })
+
+
+    Chart.defaults.global.defaultFontColor = "#FFFFFF";
+</script>

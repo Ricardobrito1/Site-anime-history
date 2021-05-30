@@ -3,57 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="imgs/Stra.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Sobre</title>
+    <title>AnimesLife</title>
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="css/contato-e-login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="header login_header">
+    <section class="header cadastro_header">
         <nav>
-            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <a href="index.html"><img src="imgs/LOGO.png" alt=""></a>
             <div class="nav-links" id="navLinks">
-                <i class="fas fa-times" onclick="menu_fechar()"></i>
+
                 <ul>
                     <li><a href="index.html">HOME</a></li>
+                    <li><a href="publicacoes.html">BATE PAPO</a></li>
                     <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="">ONE-PIECE</a></li>
+
+                    <li><a href="onepiece.html">ONE-PIECE</a></li>
                     <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="graficos.html">GRAFICOS</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
                 </ul>
             </div>
-            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+
         </nav>
 
 
 
         <div class="cadastro_page">
-            <h1>Cadastro</h1>
+
             <form id="form_cadastro" class="form_cadastro" method="post" onsubmit="return cadastrar()">
-                Nome completo
+                <h1>Cadastro</h1>
+                <br>
+                <h1>Nome completo</h1>
                 <input type="text" name="nome" autofocus="autofocus" placeholder="Nome e sobrenome" required minlength="4">
-                <br> Login
+                <br>
+                <h1>Login</h1>
                 <input type="text" name="login" placeholder="seu nome de usuário" required minlength="4">
-                <br> Senha
+                <br>
+                <h1>Email</h1>
+                <input type="text" name="email" placeholder="Email" required minlength="4">
+                <br>
+                <h1>Senha</h1>
                 <input type="password" name="senha" placeholder="***************" required minlength="4">
+                <br>
+                <h1>Anime Favorito </h1>
+                <input type="text" name="anime" placeholder="Anime Favorito" required minlength="4">
+
 
 
                 <input type="submit" id="btn_entrar" value="Cadastrar" class="butao">
             </form>
 
-            <img src="aguarde-orange.gif" id="img_aguarde" style="display: none; width:100px">
+            <img src="imgs/esperando.gif" id="img_aguarde" style="display: none; width:100px">
 
-            <div id="div_erro" style="background-color: rgb(255, 51, 0); color: rgb(0, 0, 0); display: none;">
-                Erro no cadastro
+            <div id="div_erro" style="background-color: deepskyblue; color: rgb(0, 0, 0); display: none;">
+                Erro no cadastro tente novamente
             </div>
 
         </div>
-
-
-
-
-
-
+    </section>
+    <section class="footer">
+        <h4>Feito com carinho para amantes de Naruto/Onepiece </h1>
+            <h4>Obrigado por visitar nosso web-site!</h4>
+            <div class="icons">
+                <a href="https://github.com/Ricardobrito1"> <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ricardo-galdino-227796205/"><i class="fa fa-linkedin"></i></a>
+            </div>
     </section>
 </body>
 

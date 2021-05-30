@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="imgs/Stra.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AnimesLife</title>
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="javascript.js">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,19 +19,21 @@
         <nav>
             <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
             <div class="nav-links" id="navLinks">
-                <i class="fas fa-times" onclick="menu_fechar()"></i>
-                <h3 class="logoff">Olá, <b id="b_usuario"></b></h3>
+
+
                 <ul>
 
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="publicacoes.html">BATE PAPO</a></li>
                     <li><a href="login.html">LOGIN</a></li>
                     <li><a href="cadastro.html">CADASTRAR-SE</a></li>
-                    <li><a href="onepiece.html">ONE-PIECE</a></li>
+
                     <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="graficos.html">GRAFICOS</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
                 </ul>
             </div>
-            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+
         </nav>
         <div class="textbox">
             <h1>One Piece</h1>
@@ -253,3 +256,8 @@
 
 
 </html>
+<script>
+    let usuario;
+
+    verificar_autenticacao();
+</script>

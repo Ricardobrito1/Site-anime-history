@@ -3,33 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="imgs/Stra.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT - Sobre</title>
+    <title>AnimesLife</title>
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="css/contato-e-login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/48b24e7021.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <section class="header login_header">
         <nav>
-            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <a href="index.html"><img src="imgs/LOGO.png" alt=""></a>
             <div class="nav-links" id="navLinks">
-                <i class="fas fa-times" onclick="menu_fechar()"></i>
+
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="">LOGIN</a></li>
-                    <li><a href="">ONE-PIECE</a></li>
-                    <li><a href="">NARUTO</a></li>
+                    <li><a href="publicacoes.html">BATE PAPO</a></li>
+
+                    <li><a href="cadastro.html">CADASTRAR-SE</a></li>
+                    <li><a href="onepiece.html">ONE-PIECE</a></li>
+                    <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="graficos.html">GRAFICOS</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
                 </ul>
             </div>
-            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+
         </nav>
         <div class="login_page">
             <div id="login">
                 <form id="form_login" class="loginform" method="post" onsubmit="return entrar()">
-                    Usuario:
+                    <h1>Usuario:</h1>
                     <input type="text" placeholder="Nome" class="ipt_login" name="login">
-                    <br> Senha
+                    <br>
+                    <h1>Senha</h1>
                     <input type="password" placeholder="Senha" class="ipt_login" name="senha">
                     <br>
                     <button id="btn_entrar" class="butao">Login</button>
@@ -37,24 +47,29 @@
 
             </div>
         </div>
+        <div class="extra">
+            <div id="div_erro" class="msg_erro">
+
+            </div>
+
+            <img src="imgs/esperando.gif" id="img_aguarde">
+            <!--style="display: none;"-->
+
+        </div>
     </section>
 
-    <div class="extra">
-        <div id="div_erro" class="msg_erro">
-        </div>
 
-        <img src="aguarde-orange.gif" id="img_aguarde">
-        <!--style="display: none;"-->
-
-    </div>
 
 
     <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com carinho por um aluno BandTec. Copyright © 2021</h4>
-        </div>
-    </div>
+    <section class="footer">
+        <h4>Feito com carinho para amantes de Naruto/Onepiece </h1>
+            <h4>Obrigado por visitar nosso web-site!</h4>
+            <div class="icons">
+                <a href="https://github.com/Ricardobrito1"> <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ricardo-galdino-227796205/"><i class="fa fa-linkedin"></i></a>
+            </div>
+    </section>
     <!--footer fim-->
 
 </body>
@@ -103,6 +118,7 @@
         btn_entrar.disabled = false;
         img_aguarde.style.visibility = 'hidden';
         div_erro.style.visibility = 'visible';
+        div_erro.style.background = 'deepskyblue'
         div_erro.innerHTML = resposta;
     }
 </script>

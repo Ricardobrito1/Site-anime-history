@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto IoT</title>
+    <link rel="icon" href="imgs/Stra.png">
+    <title>AnimesLife</title>
     <link rel="stylesheet" href="site.css">
     <script type="text/javascript" src="funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,10 +17,9 @@
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="imgs/LOGO2.png" alt=""></a>
+            <a href="index.html"><img src="imgs/LOGO.png" alt=""></a>
             <div class="nav-links" id="navLinks">
-                <i class="fas fa-times" onclick="menu_fechar()"></i>
-                <h3 class="logoff">Olá, <b id="b_usuario"></b></h3>
+
                 <ul>
 
                     <li><a href="index.html">HOME</a></li>
@@ -28,9 +28,11 @@
                     <li><a href="cadastro.html">CADASTRAR-SE</a></li>
                     <li><a href="onepiece.html">ONE-PIECE</a></li>
                     <li><a href="naruto.html">NARUTO</a></li>
+                    <li><a href="graficos.html">GRAFICOS</a></li>
+                    <li><a href="https://animeslife.freshservice.com/support/home">SUPORTE</a></li>
                 </ul>
             </div>
-            <i class="fas fa-bars" onclick="menu_abrir()"></i>
+
         </nav>
         <div class="textbox">
             <h1>Animes life</h1>
@@ -45,19 +47,19 @@
 
 
         <div class="linha">
-            <div class="missao caixa">
+            <div class="missao ">
                 <h2 class="h2linha">Missão</h2>
-                <p class="plinha">Nossa missão é mostra nossa paixão por anime atraves desse site e fazer com que todos fãs se sintam bem no nosso site e felizes no nosso site</p>
+                <p class="plinha">Nossa missão é mostra nossa paixão por anime atraves desse site e fazer com que todos fãs se identifiquem no site</p>
                 <img class="gifs" src="https://media.giphy.com/media/1qGaYAEAk7eOA/giphy.gif" alt="">
             </div>
-            <div class="visao caixa">
+            <div class="visao ">
                 <h2 class="h2linha">Visão</h2>
                 <p class="plinha">Nossa visão é satifazer nosso usuarios de maneira que eles sintam nosso amor por anime através do site </p>
                 <img class="gifs" src="https://media.giphy.com/media/diBEnAwwUG7UA/giphy.gif" alt="">
             </div>
-            <div class="valores caixa">
+            <div class="valores ">
                 <h2 class="h2linha">Valores</h2>
-                <p class="plinha">Amizade, trabalho duro, persistencia, tabralho em equipe, amor por pessoas</p>
+                <p class="plinha">Amizade, trabalho duro, persistencia, trabalho em equipe, amor por pessoas,familia</p>
                 <img class="gifs" src="https://media.giphy.com/media/8zs2yvHwMTWU0/giphy.gif" alt="">
             </div>
         </div>
@@ -70,16 +72,17 @@
 
                 <h2>Porque criar o site</h2>
                 <p>Nosso site foi criado atraves do meu amor por animes, o anime mudou minha vida, pois me ensinou a ser mais persistente nos meus objetivos, nunca desistir, o treino duro pode supera o talento, tambem me ensinou que nunca você irá conseguir
-                    chegar longe/realizar seus grandes sonhos sozinho será nescessario ter pessoas ao seu lado te ajudando, complementando, ensinando nescessario.
+                    chegar longe/realizar seus grandes sonhos sozinho sempre será nescessario ter pessoas ao seu lado te ajudando, complementando, ensinando nescessario, dado isso decidir criar o site AnimesLife para que outros fãs como eu se identifiquem
+                    e se seintam bem navegando no nosso site .
                 </p>
                 <h2></h2>
                 <h2>Inteiração</h2>
-                <p>Nosso site tem como foco para que os fãs de animes possam inteiragir entre si e tambem descobrir curiosidades, se divertir com o nosso quiz sobre o anime </p>
+                <p>Nosso site tem como foco para que os fãs de animes possam inteiragir entre si atraves da nossa sala de bate papo, onde tambem temos no nosso site resumos dos arcos principais e tambem algumas curiosidades legais sobre os animes </p>
 
 
 
             </div>
-            <img class="img_hist" src="https://media.giphy.com/media/7BW9U2cJPQZ0s/giphy.gif" alt="">
+            <img class="img_hist" src="imgs/1.gif" alt="">
 
         </div>
     </section>
@@ -117,8 +120,25 @@
 
 
     </section>
-    <section class="votacao">
 
+    <!-- VOTAÇÃO -->
+    <section class="votacao">
+        <div class="containervt">
+            <h1>Como foi sua experiencia em nosso site</h1>
+            <img class="imgvt" src="imgs/narutolike.png" alt="">
+            <div class="voting">
+                <button id="likebtn">
+                    <i class="fa fa-thumbs-up"></i>
+                </button>
+
+                <input class="input1" type="number" id="input1" value="0" name="">
+                <button id="dislikebtn">
+                    <i class="fa fa-thumbs-down"></i>
+                </button>
+
+                <input class="input1" type="number" id="input2" value="0" name="">
+            </div>
+        </div>
     </section>
     <section class="footer">
         <h4>Feito com carinho para amantes de Naruto/Onepiece </h1>
@@ -132,7 +152,20 @@
 
 
 </body>
+<script type="text/javascript">
+    let likebtn = document.querySelector('#likebtn');
+    let dislikebtn = document.querySelector('#dislikebtn');
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+
+    likebtn.addEventListener('click', () => {
+        input1.value = parseInt(input1.value) + 1;
+        input1.style.color = "#12ff00";
+    })
+    dislikebtn.addEventListener('click', () => {
+        input2.value = parseInt(input2.value) + 1;
+        input2.style.color = "#ff0000";
+    })
+</script>
 
 </html>
-<script>
-</script>
